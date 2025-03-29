@@ -11,6 +11,7 @@
 - モチーフ（繰り返し単位）を**最短の単位に正規化**
 - ホモポリマー（例：AAA、TTTT）を自動的に除外
 - 繰り返し単位長（モチーフ長）でフィルタリングが可能
+- `.fa.gz` などの**圧縮FASTAも自動的に解凍して解析可能**（Biopython使用）
 
 ---
 
@@ -31,22 +32,26 @@ pip install biopython
 | ファイル名 | 説明 |
 |------------|------|
 | `misa_like_normalized_filtered.py` | SSR検出用Pythonスクリプト |
-| `SOL_chr6.fa.gz` | 解析用FASTAファイル（圧縮形式） |
-| `example_output/` | 出力例（.tsv, .gff） |
+| `Zea_chr1_region01.fa.gz` ~ `Zea_chr1_region10.fa.gz` | トウモロコシChr1の異なる10領域（各1Mbp） |
+| `Chr6.tsv` | SSR検出結果（タブ区切りテーブル） |
+| `Chr6.gff` | SSR検出結果（ゲノムブラウザ表示用GFF3） |
+| `README.md` | この説明ファイル |
 
 ---
 
 ## ▶️ 実行方法
 
-### 基本的な使い方：
+### 基本的な使い方（例：トウモロコシChr1の1領域に対して）：
 ```bash
-python misa_like_normalized_filtered.py SOL_chr6.fa.gz
+python misa_like_normalized_filtered.py Zea_chr1_region01.fa.gz
 ```
 
 ### 繰り返し単位の長さを指定（例：3～6塩基）
 ```bash
-python misa_like_normalized_filtered.py SOL_chr6.fa.gz --min-unit 3 --max-unit 6
+python misa_like_normalized_filtered.py Zea_chr1_region01.fa.gz --min-unit 3 --max-unit 6
 ```
+
+※ `.fa.gz` のままで実行できます（Biopythonが自動で解凍します）
 
 ---
 
@@ -63,11 +68,45 @@ Chr6	100	120	TTA	7	(TTA)7
 
 ---
 
+## 💾 ダウンロード・解凍の方法（学生向け）
+
+### 🔽 GitHubからの手動ダウンロード（ブラウザ）
+1. 各 `.fa.gz` ファイルをクリック
+2. 「Download」ボタンを押して保存
+
+### 💻 ターミナルからのダウンロード（Mac/Linux）
+
+#### `curl` を使う場合：
+```bash
+curl -O https://raw.githubusercontent.com/spinachpie-060/misa_analysis/main/Zea_chr1_region01.fa.gz
+```
+
+#### `wget` を使う場合：
+```bash
+wget https://raw.githubusercontent.com/spinachpie-060/misa_analysis/main/Zea_chr1_region01.fa.gz
+```
+
+#### 🔁 複数ファイルを一括でダウンロード
+```bash
+for i in $(seq -w 1 10); do
+  wget https://raw.githubusercontent.com/spinachpie-060/misa_analysis/main/Zea_chr1_region${i}.fa.gz
+done
+```
+
+### 📦 `.fa.gz` を解凍したい場合
+```bash
+gunzip Zea_chr1_region01.fa.gz
+```
+※ ただし、解凍しなくてもスクリプトはそのまま実行可能です。
+
+---
+
 ## 🎓 実習課題例
 
 - 自分の配列を使ってSSRを検出してみよう
 - `--min-unit` や `--max-unit` を変更して結果を比較
 - 出力された `.gff` を IGV などのゲノムブラウザで表示
+- 10領域の中で最もSSRが多い領域を比較・考察してみよう
 
 ---
 
@@ -81,7 +120,7 @@ This repository contains a Python script to detect perfect SSRs (microsatellites
 
 ### Run Example:
 ```bash
-python misa_like_normalized_filtered.py SOL_chr6.fa.gz --min-unit 3 --max-unit 6
+python misa_like_normalized_filtered.py Zea_chr1_region01.fa.gz --min-unit 3 --max-unit 6
 ```
 
 ### Output:
