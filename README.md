@@ -81,22 +81,18 @@ Chr6	100	120	TTA	7	(TTA)7
 ---
 
 ## 💾 ダウンロード・解凍の方法（学生向け）
-
-### 🔽 GitHubからの手動ダウンロード（ブラウザ）
-1. 各 `.fa.gz` ファイルをクリック
-2. 「Download」ボタンを押して保存
-
-### 💻 ターミナルからのダウンロード（Mac/Linux）
-# curl を使う場合：
+# curl を使う場合（macユーザー）：
 curl -L -o misa_analysis.zip https://github.com/spinachpie-060/misa_analysis/archive/refs/heads/main.zip
 
-# wget を使う場合：
+# wget を使う場合（ubuntuユーザー）：
 wget -O misa_analysis.zip https://github.com/spinachpie-060/misa_analysis/archive/refs/heads/main.zip
 
 ダウンロード後、次のように解凍：
+
 unzip misa_analysis.zip
 cd misa_analysis-main  # フォルダに移動
 
+⸻
 
 ### 📦 `.fa.gz` を解凍したい場合
 ```bash
