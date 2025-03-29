@@ -56,7 +56,15 @@ def main():
 
     motifs = {1: 10, 2: 6, 3: 5, 4: 5, 5: 5, 6: 5}
 
-    for record in SeqIO.parse(args.fasta, "fasta"):
+    import gzip
+
+    # 入力ファイルを開く（.gz 対応）
+    if args.fasta.endswith('.gz'):
+        handle = gzip.open(args.fasta, 'rt')
+    else:
+        handle = open(args.fasta, 'r')
+
+    for record in SeqIO.parse(handle, "fasta"):
         seq_id = record.id
         seq = str(record.seq).upper()
         ssrs = detect_ssrs(seq, motifs, args.min_unit, args.max_unit)
