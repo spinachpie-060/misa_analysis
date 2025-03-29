@@ -23,7 +23,19 @@
 ### 🔧 インストール方法
 ```bash
 pip install biopython
+
 ```
+### 🔧 実習終了後に、アンインストールしたい場合
+pip uninstall biopython
+
+すると、以下のような確認メッセージが表示されます：
+Found existing installation: biopython 1.79
+Uninstalling biopython-1.79:
+  Would remove:
+    /usr/local/lib/python3.10/site-packages/Bio/
+    ...
+Proceed (Y/n)?
+✅ y を押せば削除されます。
 
 ---
 
@@ -75,23 +87,16 @@ Chr6	100	120	TTA	7	(TTA)7
 2. 「Download」ボタンを押して保存
 
 ### 💻 ターミナルからのダウンロード（Mac/Linux）
+# curl を使う場合：
+curl -L -o misa_analysis.zip https://github.com/spinachpie-060/misa_analysis/archive/refs/heads/main.zip
 
-#### `curl` を使う場合：
-```bash
-curl -O https://raw.githubusercontent.com/spinachpie-060/misa_analysis/main/Zea_chr1_region01.fa.gz
-```
+# wget を使う場合：
+wget -O misa_analysis.zip https://github.com/spinachpie-060/misa_analysis/archive/refs/heads/main.zip
 
-#### `wget` を使う場合：
-```bash
-wget https://raw.githubusercontent.com/spinachpie-060/misa_analysis/main/Zea_chr1_region01.fa.gz
-```
+ダウンロード後、次のように解凍：
+unzip misa_analysis.zip
+cd misa_analysis-main  # フォルダに移動
 
-#### 🔁 複数ファイルを一括でダウンロード
-```bash
-for i in $(seq -w 1 10); do
-  wget https://raw.githubusercontent.com/spinachpie-060/misa_analysis/main/Zea_chr1_region${i}.fa.gz
-done
-```
 
 ### 📦 `.fa.gz` を解凍したい場合
 ```bash
