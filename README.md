@@ -29,12 +29,14 @@ pip install biopython
 pip uninstall biopython
 
 すると、以下のような確認メッセージが表示されます：
+
 Found existing installation: biopython 1.79
 Uninstalling biopython-1.79:
   Would remove:
     /usr/local/lib/python3.10/site-packages/Bio/
     ...
 Proceed (Y/n)?
+
 ✅ y を押せば削除されます。
 
 ---
