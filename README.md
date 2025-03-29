@@ -110,6 +110,17 @@ gunzip Zea_chr1_region01.fa.gz
 
 ---
 
+## 💡 Linuxやターミナルが初めての方へ（Notion教材）
+
+初めてLinuxやターミナルを使う方向けに、以下のページで解説をしています。
+インストール、基本操作、ファイル操作などを丁寧に紹介しています。
+
+👉 [学生実習：初めてのLinuxを使ったバイオインフォマティクス（Notion）](https://abundant-dill-cf4.notion.site/Linux-1c2d8ba9f8e28081aa61f9377804f109)
+
+実行に入る前に一度目を通しておくと安心です。
+
+---
+
 ## 🇬🇧 English version (optional)
 
 This repository contains a Python script to detect perfect SSRs (microsatellites) in DNA sequences provided in FASTA format. The output includes normalized motifs (shortest repeat units), skips homopolymers, and exports to TSV and GFF3.
