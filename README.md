@@ -53,6 +53,22 @@ Proceed (Y/n)?
 
 ---
 
+## 💾 ダウンロード・解凍の方法（学生向け）
+# curl を使う場合（macユーザー）：
+curl -L -o misa_analysis.zip https://github.com/spinachpie-060/misa_analysis/archive/refs/heads/main.zip
+
+# wget を使う場合（ubuntuユーザー）：
+wget -O misa_analysis.zip https://github.com/spinachpie-060/misa_analysis/archive/refs/heads/main.zip
+
+ダウンロード後、次のように解凍：
+
+unzip misa_analysis.zip
+
+cd misa_analysis-main  # フォルダに移動
+
+
+---
+
 ## ▶️ 実行方法
 
 ### 基本的な使い方（例：トウモロコシChr1の1領域に対して）：
