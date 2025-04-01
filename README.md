@@ -68,7 +68,7 @@ wget -O misa_analysis.zip https://github.com/spinachpie-060/misa_analysis/archiv
 
 ```
 
-ダウンロード後、次のように解凍：
+ダウンロード後、次のように解凍：解凍すると、フォルダ "misa_analysis-main" が作られる
 ```bash
 unzip misa_analysis.zip
 
@@ -80,7 +80,7 @@ cd misa_analysis-main
 
 ```
 
-フォルダの中を確認する：
+フォルダの中を確認する：フォルダ内に解析に使うファイル一式があるのか確認する。
 ```bash
 ls misa_analysis-main 
 
