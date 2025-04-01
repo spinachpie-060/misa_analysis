@@ -72,7 +72,11 @@ wget -O misa_analysis.zip https://github.com/spinachpie-060/misa_analysis/archiv
 ```bash
 unzip misa_analysis.zip
 
-cd misa_analysis-main  # フォルダに移動
+```
+
+フォルダに移動：
+```bash
+cd misa_analysis-main  
 
 ```
 
