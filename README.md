@@ -1,11 +1,11 @@
 # MISA-like SSR検出ツール（学生向けチュートリアル）
 
-このリポジトリには、FASTA形式のDNA配列からマイクロサテライト（SSR）を検出するPythonスクリプトが含まれています。
+このリポジトリには、FASTA形式のDNA配列からマイクロサテライト（SSR）を検出するPythonスクリプト "misa_like_normalized_filtered.py" が含まれています。
 出力はGFF3およびTSV形式で得られます。
 
 ---
 
-## ✨ このスクリプトができること
+## ✨ "misa_like_normalized_filtered.py" ができること
 
 - 完全一致のSSR（繰り返し配列）を検出
 - モチーフ（繰り返し単位）を**最短の単位に正規化**
