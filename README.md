@@ -26,8 +26,10 @@ pip install biopython
 
 ```
 ### 🔧 実習終了後に、アンインストールしたい場合
+```bash
 pip uninstall biopython
 
+```
 すると、以下のような確認メッセージが表示されます：
 
 Found existing installation: biopython 1.79
@@ -55,16 +57,24 @@ Proceed (Y/n)?
 
 ## 💾 ダウンロード・解凍の方法（学生向け）
 # curl を使う場合（macユーザー）：
+```bash
 curl -L -o misa_analysis.zip https://github.com/spinachpie-060/misa_analysis/archive/refs/heads/main.zip
 
+```
+
 # wget を使う場合（ubuntuユーザー）：
+```bash
 wget -O misa_analysis.zip https://github.com/spinachpie-060/misa_analysis/archive/refs/heads/main.zip
 
-ダウンロード後、次のように解凍：
+```
 
+ダウンロード後、次のように解凍：
+```bash
 unzip misa_analysis.zip
 
 cd misa_analysis-main  # フォルダに移動
+
+```
 
 ⸻
 
