@@ -80,6 +80,12 @@ cd misa_analysis-main
 
 ```
 
+フォルダの中を確認する：
+```bash
+ls misa_analysis-main 
+
+```
+
 ⸻
 
 ### 📦 `.fa.gz` を解凍したい場合
