@@ -20,12 +20,18 @@
 - Python 3.6 以上
 - Biopython ライブラリ
 
-### 🔧 インストール方法
+### 🔧 インストール方法（pip を使う場合）
 ```bash
 pip install biopython
 
 ```
-### 🔧 実習終了後に、アンインストールしたい場合
+### 🔧 インストール方法（pipが使えず、apt を使う場合）
+```bash
+sudo apt update
+sudo apt install python3-biopython
+
+```
+### 🔧 実習終了後に、アンインストールしたい場合（pipの場合）
 ```bash
 pip uninstall biopython
 
@@ -41,7 +47,16 @@ Proceed (Y/n)?
 
 ✅ y を押せば削除されます。
 
+
+### 🔧 実習終了後に、アンインストールしたい場合（apt の場合）
+```bash
+sudo apt remove python3-biopython
+sudo apt autoremove
+
+```
+
 ---
+
 
 ## 📁 リポジトリの構成
 
@@ -80,7 +95,7 @@ cd misa_analysis-main
 
 ```
 
-フォルダの中を確認する：フォルダ内に解析に使うファイル一式があるのか確認する。
+フォルダの中を確認する：フォルダ内に解析に使うファイル一式があるのか確認する（「リポジトリ」の構成を参照してください）。
 ```bash
 ls misa_analysis-main 
 
@@ -100,7 +115,12 @@ gunzip Zea_chr1_region01.fa.gz
 
 ### 基本的な使い方（例：トウモロコシChr1の1領域に対して）：
 ```bash
-python misa_like_normalized_filtered.py Zea_chr1_region01.fa.gz
+python misa_like_normalized_filtered.py Zea_chr1_region01.fa.gz 
+```
+
+うまくいかない場合
+```bash
+python3 misa_like_normalized_filtered.py Zea_chr1_region01.fa.gz
 ```
 
 ### 繰り返し単位の長さを指定（例：3～6塩基）
