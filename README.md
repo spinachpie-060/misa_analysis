@@ -1,196 +1,212 @@
-MISA-like SSR検出ツール（Codespaces 版・学生向けチュートリアル）
+# MISA-like SSR検出ツール（Codespaces 版・学生向けチュートリアル）
 
-このリポジトリは、GitHub Codespaces を使って
-ブラウザ上で Linux と Python を練習しながら、
-FASTA形式のDNA配列からマイクロサテライト（SSR）を検出する実習を行うための教材です。
+このリポジトリは **GitHub Codespaces** を使って、  
+ブラウザ上で **Linux 操作・Python スクリプト実行・SSR（マイクロサテライト）解析** を体験するための教材です。
 
-Codespaces を使うため、自分のPCに何もインストールする必要はありません。
+本実習では以下の基礎を学びます。
 
-⸻
+- GitHub の基本操作
+- Codespaces の起動と利用
+- Linux ターミナル操作
+- Python スクリプトの実行
+- DNA 配列からの SSR 検出
+- 出力結果の確認と考察
 
-🌐 はじめに：Codespaces の使い方（必ず読む）
+Codespaces を使うため、**自分の PC に Python や Linux をインストールする必要はありません。**
 
-1. リポジトリを自分のGitHubアカウントにコピー（Use this template）
+---
+
+# 🌐 はじめに：Codespaces の使い方（必ず読む）
+
+## 1. 教材リポジトリを開く
+
+以下のページにアクセスします。
+
+https://github.com/spinachpie-060/misa_analysis
+
+---
+
+## 2. リポジトリを自分の GitHub アカウントにコピー
 
 右上の
-“Use this template” → “Create a new repository”
-をクリックし、自分のアカウントにコピーします。
 
-※ 先生のリポジトリに直接書き込むことはありません。
+Use this template
 
-⸻
+をクリックし、
 
-2. Codespaces を起動する
+Create a new repository
 
-自分の作ったリポジトリを開き、
-緑色の 「Code」ボタン → Codespaces タブ → “Create codespace on main”
+を選び、自分の GitHub アカウントにコピーします。
+
+※ 先生のリポジトリを直接編集することはありません。
+
+---
+
+## 3. Codespaces を起動する
+
+自分の作成したリポジトリを開き、
+
+Code
+↓
+Codespaces
+↓
+Create codespace on main
+
 をクリックします。
 
-すると、ブラウザ上で VS Code が起動します。
+すると **ブラウザ上で VS Code が起動**します。
 
-⸻
+---
 
-3. ターミナルを開く
+## 4. ターミナルを開く
 
-VS Code（Codespaces）のメニューから：
+VS Code メニュー
 
 Terminal → New Terminal
 
-またはショートカット：
+またはショートカット
 
 Ctrl + Shift + `
 
-これで Codespaces の Linux ターミナルが開きます。
+---
 
-⸻
+# ⚙️ 必要ライブラリについて
 
-⚙️ まずやること：Biopython をインストール
+この教材では **Biopython** を使用します。
 
-Codespaces は軽量環境なので、必要なライブラリは自分で入れます。
-
-ターミナルで：
+通常は次のコマンドでインストールします。
 
 pip install biopython
 
-（1回だけでOK。同じ Codespace では次回から不要）
+（同じ Codespace では1回だけでOK）
 
-⸻
+---
 
-📁 リポジトリの構成
+# 📁 リポジトリの構成
 
-ファイル名	説明
-misa_like_normalized_filtered.py	SSR検出用Pythonスクリプト
-Zea_chr1_region01.fa.gz ~ Zea_chr1_region10.fa.gz	トウモロコシChr1の10領域（各1Mbp）
-Chr6.tsv / Chr6.gff	例としての SSR 検出結果（比較用）
-README.md	本チュートリアル
+| ファイル | 説明 |
+|---|---|
+| misa_like_normalized_filtered.py | SSR検出用Pythonスクリプト |
+| Zea_chr1_region01.fa.gz ～ Zea_chr1_region10.fa.gz | トウモロコシChr1の10領域 |
+| Chr6.tsv / Chr6.gff | SSR検出結果の例 |
+| README.md | この説明 |
+| analysis_examples.md | 出力結果の解析チュートリアル |
 
-Codespaces 起動後は自動的にこれらのファイルが見えます。
+---
 
-⸻
+# ▶️ 実行方法
 
-▶️ 実行方法（Codespaces 内）
-
-1. ファイル一覧を確認
+## 1. ファイル確認
 
 ls -1
 
-misa_like_normalized_filtered.py と
-Zea_chr1_region01.fa.gz などのファイルが見えるはずです。
+---
 
-⸻
-
-2. SSR検出を実行（基本）
+## 2. SSR検出（基本）
 
 python misa_like_normalized_filtered.py Zea_chr1_region01.fa.gz
 
-成功すると、次のようなファイルが新しく作られます：
-	•	1:1-1000000.tsv
-	•	1:1-1000000.gff
+成功すると
 
-（配列IDに応じて名前は変わります）
+1:1-1000000.tsv
+1:1-1000000.gff
 
-⸻
+が生成されます。
 
-3. モチーフ長を指定したい場合（例：3〜6塩基）
+---
 
-python misa_like_normalized_filtered.py Zea_chr1_region01.fa.gz --min-unit 3 --max-unit 6
+## 3. モチーフ長を指定
 
+例：3〜6塩基
 
-⸻
+python misa_like_normalized_filtered.py Zea_chr1_region01.fa.gz –min-unit 3 –max-unit 6
 
-4. gzip を手動で解凍したい場合（不要だが可能）
+---
+
+## 4. gzip を解凍する場合（通常不要）
 
 gunzip Zea_chr1_region01.fa.gz
 
-※解凍せずに .fa.gz のままでスクリプトは実行できます。
+`.fa.gz` のまま実行できます。
 
-⸻
+---
 
-🧪 出力形式
+# 🧪 出力形式
 
-TSV（表形式）
+### TSV
 
 ID	Start	End	Motif	Repeats	SSR
 1:1-1000000	100	120	TTA	7	(TTA)7
 
-GFF（ゲノムブラウザ用）
+### GFF
 
 1:1-1000000	MISA	microsatellite	100	120	.	.	.	Note=microsatellite,(TTA)7;ID=1:1-1000000.1
 
-IGV 等で可視化できます。
+GFF は IGV などのゲノムブラウザで可視化できます。
 
-⸻
+---
 
-🎓 実習課題
+# 🎓 実習課題
 
-Codespaces 上で、以下の課題に挑戦してみましょう。
+## 課題1
 
-✔ 課題1：自分で実行してみる
+Zea_chr1_region01.fa.gz
 
-Zea_chr1_region01.fa.gz のSSRを検出し、
-出力された .tsv と .gff を確認せよ。
+を解析し、生成された `.tsv` と `.gff` を確認せよ。
 
-⸻
+---
 
-✔ 課題2：10領域すべてをループ実行するBashスクリプトを作る
+## 課題2
+
+10領域すべてを解析する Bash スクリプトを書きなさい。
 
 ヒント：
 
 for f in Zea_chr1_region*.fa.gz
 do
-  python misa_like_normalized_filtered.py "$f"
+python misa_like_normalized_filtered.py “$f”
 done
 
+---
+
+## 課題3
+
+モチーフ長を変えて比較
+
+例
+
+–min-unit 2 –max-unit 3
+–min-unit 4 –max-unit 6
+
+---
+
+## 課題4
+
+出力された TSV を Linux コマンドで解析せよ。
+
+analysis_examples.md
+
+を参考にすること。
+
+---
+
+# 🛑 Codespaces の終了
+
+作業が終わったら
+
+VS Code 下部
+
+Codespaces
+↓
+Stop Current Codespace
+
+※ブラウザを閉じただけでは停止しません。
+
+---
+
+# 💡 Linux初心者向け教材
+
+https://abundant-dill-cf4.notion.site/Linux-1c2d8ba9f8e28081aa61f9377804f109
+
 
 ⸻
-
-✔ 課題3：モチーフ長の条件を変えて比較する
-
-例：
-
---min-unit 2 --max-unit 3
---min-unit 4 --max-unit 6
-
-違いを考察せよ。
-
-⸻
-
-✔ 課題4：出力された GFF を IGV で見てみる
-
-Codespaces で作った GFF をローカルにダウンロードして可視化する。
-
-⸻
-
-🛑 Codespaces の終了方法
-
-作業が終わったら、
-VS Code 下部にある「Codespaces ○○」をクリックし：
-
-→ Stop Current Codespace
-
-とすると、計算リソースの消費を止められます。
-
-（コマンドラインの exit では Codespace は止まりません）
-
-⸻
-
-💡 Linux初心者向け教材
-
-Linux の基礎を事前に学びたい場合はこちら：
-
-👉 https://abundant-dill-cf4.notion.site/Linux-1c2d8ba9f8e28081aa61f9377804f109
-
-⸻
-
-🇬🇧 English version (optional)
-
-(省略せず元の英語部分も必要なら付けます)
-
-⸻
-
-必要であれば：
-	•	「Codespaces 入門」ページ
-	•	「学生用スタートガイド（PDF）」
-	•	「スクリプト分解解説ページ」
-
-も作成できますのでお知らせください。
