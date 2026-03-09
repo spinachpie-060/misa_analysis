@@ -1,0 +1,109 @@
+# IGV (Integrative Genomics Viewer) で SSR検出結果を確認するマニュアル
+
+このマニュアルでは、`misa_like_normalized_filtered.py` によって出力された GFF ファイルを **IGV** 上で視覚的に確認する方法を説明します。
+
+---
+
+## 1. IGVとは？
+
+**IGV（Integrative Genomics Viewer）** は、ゲノムアノテーションやシーケンスアライメントなどを視覚的に確認するための無料のデスクトップアプリケーションです。
+
+- IGV公式サイト：[https://software.broadinstitute.org/software/igv/](https://software.broadinstitute.org/software/igv/)
+- 対応OS：Windows / macOS / Linux
+
+---
+
+## 2. IGVのインストール方法
+
+### macOS
+
+1. IGVの公式ダウンロードページにアクセス：
+[https://software.broadinstitute.org/software/igv/download](https://software.broadinstitute.org/software/igv/download)
+2. macOS 用の `.zip` ファイルをクリックしてダウンロード
+3. ダウンロード後、ZIPファイルを展開し、`IGV_2.X.X.app` を `アプリケーション` フォルダに移動
+4. 初回起動時にセキュリティ警告が出た場合：
+    - Finder で右クリック → 「開く」 → 「開く」を選択
+
+### Windows
+
+1. 同様にダウンロードページから Windows用 `.exe` ファイルをダウンロード
+2. ダブルクリックしてインストール
+
+### Linux
+
+1. ダウンロードページから Linux用 `.tar.gz` を取得し、展開後に `igv.sh` を実行
+
+---
+
+## 3. IGVでの表示準備
+
+### 表示に必要なファイル
+
+- `Zea_chr1_region01.fa.gz`（または解凍した `.fa`） → 参照配列
+- `Zea_chr1_region01.gff` → SSRアノテーション
+
+### 手順
+
+### ステップ 1：IGV を起動
+
+### ステップ 2：ゲノムの読み込み
+
+1. メニューから `Genomes` → `Load Genome from File...` を選択
+2. `Zea_chr1_region01.fa`（解凍済み）を選択
+3. 表示名は自動で付きます（例：`Zea_chr1_region01`）
+
+### ステップ 3：アノテーションファイルの読み込み
+
+1. メニューから `File` → `Load from File...` を選択
+2. `Zea_chr1_region01.gff` を選択
+3. トラックとしてSSRが表示されます（領域名、繰り返しモチーフなど）
+
+---
+
+## 4. 表示の調整
+
+- **ズーム**：マウスホイールや`+` / で拡大・縮小
+- **領域ジャンプ**：左上の検索バーに `1:1-1000000` のように入力してエンター
+- **ツールチップ**：アノテーショントラックをクリックすると `(TTA)5` などの情報が表示
+
+---
+
+## 5. 補足：FASTAが`.gz`のままだと読み込めない場合
+
+```bash
+gunzip Zea_chr1_region01.fa.gz
+
+```
+
+で解凍して `.fa` にしてから読み込みましょう。
+
+---
+
+## 6. よくある質問（FAQ）
+
+### Q. IGVに読み込んだGFFが表示されない
+
+- GFFファイルとFASTAの参照配列が一致しているか確認（IDなど）
+
+### Q. 配列が見えない
+
+- ズームインして確認、または検索バーで領域を指定してください
+
+### Q. Windowsで日本語名のフォルダにあると不具合？
+
+- 英数字フォルダ内での使用を推奨（例：`C:\\Users\\yourname\\igv_data`）
+
+---
+
+## 7. 参考資料
+
+- IGVマニュアル：[https://software.broadinstitute.org/software/igv/UserGuide](https://software.broadinstitute.org/software/igv/UserGuide)
+- misa_like スクリプト開発ページ：[https://github.com/spinachpie-060/misa_analysis](https://github.com/spinachpie-060/misa_analysis)
+
+---
+
+---
+
+ご不明点があれば担当教員にお尋ねください。
+
+Happy SSR visualizing! 🎉
