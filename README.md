@@ -90,6 +90,7 @@ pip install biopython
 | Zea_chr1_region01.fa.gz ～ Zea_chr1_region10.fa.gz | トウモロコシChr1の10領域 |
 | Chr6.tsv / Chr6.gff | SSR検出結果の例 |
 | README.md | この説明 |
+|manual_misa_like_normalized_filtered.md|misa_like_normalized_filtered.py の使い方解説|
 | analysis_examples.md | 出力結果の解析チュートリアル |
 
 ---
@@ -210,3 +211,4 @@ https://abundant-dill-cf4.notion.site/Linux-1c2d8ba9f8e28081aa61f9377804f109
 
 
 ⸻
+
