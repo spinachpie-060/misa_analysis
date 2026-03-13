@@ -120,7 +120,7 @@ python misa_like_normalized_filtered.py Zea_chr1_region01.fa.gz
 
 例：3〜6塩基
 
-python misa_like_normalized_filtered.py Zea_chr1_region01.fa.gz –min-unit 3 –max-unit 6
+python misa_like_normalized_filtered.py Zea_chr1_region01.fa.gz –-min-unit 3 –-max-unit 6
 
 ---
 
@@ -211,4 +211,5 @@ https://abundant-dill-cf4.notion.site/Linux-1c2d8ba9f8e28081aa61f9377804f109
 
 
 ⸻
+
 
