@@ -85,7 +85,7 @@ pip install biopython # 同じ Codespace では1回だけでOK
 
 | ファイル | 説明 |
 |---|---|
-| misa_like_normalized_filtered.py | SSR検出用Pythonスクリプト |
+| misa_like_normalized_filtered.v2.py | SSR検出用Pythonスクリプト |
 | Zea_chr1_region01.fa.gz ～ Zea_chr1_region10.fa.gz | トウモロコシChr1の10領域 |
 | Chr6.tsv / Chr6.gff | SSR検出結果の例 |
 | README.md | この説明 |
@@ -104,7 +104,7 @@ ls -1
 
 ## 2. SSR検出（基本）
 
-python misa_like_normalized_filtered.py Zea_chr1_region01.fa.gz
+python misa_like_normalized_filtered.v2.py Zea_chr1_region01.fa.gz
 
 成功すると
 
