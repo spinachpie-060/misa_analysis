@@ -21,9 +21,9 @@ Codespaces を使うため、**自分の PC に Python や Linux をインスト
 ## 1. 教材リポジトリを開く
 
 以下のページにアクセスします。
-
+```
 https://github.com/spinachpie-060/misa_analysis
-
+```
 ---
 
 ## 2. リポジトリを自分の GitHub アカウントにコピー
@@ -38,7 +38,7 @@ Create a new repository
 
 を選び、自分の GitHub アカウントにコピーします。
 
-※ 先生のリポジトリを直接編集することはありません。
+※ リポジトリ "spinachpie-060/misa_analysis" を直接編集することはありません。
 
 ---
 
@@ -74,12 +74,10 @@ Ctrl + Shift + `
 
 この教材では **Biopython** を使用します。
 
-通常は次のコマンドでインストールします。
-
-pip install biopython
-
-（同じ Codespace では1回だけでOK）
-
+通常は次のコマンドでインストールしますが、リポジトリをコピーすると自動でインストールされるように設定したので、今回は以下の操作は不要です。
+```
+pip install biopython # 同じ Codespace では1回だけでOK
+```
 ---
 
 # 📁 リポジトリの構成
