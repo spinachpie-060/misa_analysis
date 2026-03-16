@@ -43,6 +43,21 @@ Create a new repository
 
 ---
 
+# 📁 リポジトリの構成
+
+| ファイル | 説明 |
+|---|---|
+| README.md | この説明 |
+| 🐚 シェル（Shell）とは？.md | シェルに関する説明。まず、最初に、これを読んでください。|
+| 🐧 初心者向け Linux コマンド入門.md | Linuxの超基本コマンドの解説。次に、読むべきはこれ！ |
+| 🐚 シェルスクリプト初心者ガイド.md | 簡単なプログラム作成から実行まで。最後に、これを読んでください。 |
+| manual_misa_like_normalized_filtered.v2.md |misa_like_normalized_filtered.v2.py の使い方解説 |
+| misa_like_normalized_filtered.v2.py | SSR検出用Pythonスクリプト |
+| Zea_chr1_region01.fa.gz ～ Zea_chr1_region10.fa.gz | トウモロコシChr1の10領域 |
+| Chr6.tsv / Chr6.gff | SSR検出結果の例 |
+| analysis_examples.md | 出力結果の解析チュートリアル |
+
+---
 ## 3. Codespaces を起動する
 
 自分の作成したリポジトリを開き、
@@ -79,19 +94,6 @@ Ctrl + Shift + `
 ```
 pip install biopython # 同じ Codespace では1回だけでOK
 ```
----
-
-# 📁 リポジトリの構成
-
-| ファイル | 説明 |
-|---|---|
-| misa_like_normalized_filtered.v2.py | SSR検出用Pythonスクリプト |
-| Zea_chr1_region01.fa.gz ～ Zea_chr1_region10.fa.gz | トウモロコシChr1の10領域 |
-| Chr6.tsv / Chr6.gff | SSR検出結果の例 |
-| README.md | この説明 |
-| manual_misa_like_normalized_filtered.md |misa_like_normalized_filtered.py の使い方解説 |
-| analysis_examples.md | 出力結果の解析チュートリアル |
-
 ---
 
 # ▶️ 実行方法
