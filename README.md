@@ -21,9 +21,9 @@ Codespaces を使うため、**自分の PC に Python や Linux をインスト
 ## 1. 教材リポジトリを開く
 
 以下のページにアクセスします。
-```
+
 https://github.com/spinachpie-060/misa_analysis
-```
+
 ---
 
 ## 2. リポジトリを自分の GitHub アカウントにコピー
@@ -38,7 +38,8 @@ Create a new repository
 
 を選び、自分の GitHub アカウントにコピーします。
 
-※ リポジトリ "spinachpie-060/misa_analysis" を直接編集することはありません。
+※ 以降、自分の GitHub アカウントにコピーしたリポジトリを操作します。
+従って、"spinachpie-060" のリポジトリ（misa_analysis）を直接編集することはありません。
 
 ---
 
@@ -88,7 +89,7 @@ pip install biopython # 同じ Codespace では1回だけでOK
 | Zea_chr1_region01.fa.gz ～ Zea_chr1_region10.fa.gz | トウモロコシChr1の10領域 |
 | Chr6.tsv / Chr6.gff | SSR検出結果の例 |
 | README.md | この説明 |
-|manual_misa_like_normalized_filtered.md|misa_like_normalized_filtered.py の使い方解説|
+| manual_misa_like_normalized_filtered.md |misa_like_normalized_filtered.py の使い方解説 |
 | analysis_examples.md | 出力結果の解析チュートリアル |
 
 ---
@@ -149,43 +150,42 @@ GFF は IGV などのゲノムブラウザで可視化できます。
 
 ## 課題1
 
-Zea_chr1_region01.fa.gz
+Zea_chr1_region01.fa.gz ~ Zea_chr1_region10.fa.gz から、
 
-を解析し、生成された `.tsv` と `.gff` を確認せよ。
+1つ選んで解析し（オプションを設定しない）、生成された `.tsv` と `.gff` を確認せよ。
+
+**同じ班のメンバー間で、異なるファイルを選んでください。**
 
 ---
 
 ## 課題2
 
-10領域すべてを解析する Bash スクリプトを書きなさい。
+Zea_chr1_region01.fa.gz ~ Zea_chr1_region10.fa.gz から、1つ選び、
+異なる2通りのモチーフ長条件を指定して、
 
-ヒント：
 
-for f in Zea_chr1_region*.fa.gz
-do
-python misa_like_normalized_filtered.py “$f”
-done
-
----
-
-## 課題3
-
-モチーフ長を変えて比較
-
-例
 
 –min-unit 2 –max-unit 3
 –min-unit 4 –max-unit 6
 
 ---
 
-## 課題4
+## 課題3
 
 出力された TSV を Linux コマンドで解析せよ。
 
 analysis_examples.md
 
 を参考にすること。
+
+---
+
+## 課題4
+
+
+
+10領域すべてを解析する Bash スクリプトを作成し、実行しなさい。
+（"シェルスクリプト初心者ガイド" にヒントがあります。 "for構文" が鍵になります。）
 
 ---
 
