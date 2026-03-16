@@ -48,6 +48,7 @@ Create a new repository
 | ファイル | 説明 |
 |---|---|
 | README.md | この説明 |
+| GitHub アカウントの作り方（学生向けガイド）.md | これを読んでアカウントを作ってください |
 | 🐚 シェル（Shell）とは？.md | シェルに関する説明。まず、最初に、これを読んでください。|
 | 🐧 初心者向け Linux コマンド入門.md | Linuxの超基本コマンドの解説。次に、読むべきはこれ！ |
 | 🐚 シェルスクリプト初心者ガイド.md | 簡単なプログラム作成から実行まで。最後に、これを読んでください。 |
@@ -56,6 +57,7 @@ Create a new repository
 | Zea_chr1_region01.fa.gz ～ Zea_chr1_region10.fa.gz | トウモロコシChr1の10領域 |
 | Chr6.tsv / Chr6.gff | SSR検出結果の例 |
 | analysis_examples.md | 出力結果の解析チュートリアル |
+| IGV (Integrative Genomics Viewer) で SSR検出結果を確認するマニュアル.md | ゲノムブラウザーIGVを使って、出力結果を確認しよう |
 
 ---
 ## 3. Codespaces を起動する
