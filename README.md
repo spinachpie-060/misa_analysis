@@ -52,7 +52,7 @@ Create a new repository
 | 🐚 シェル（Shell）とは？.md | シェルに関する説明。まず、最初に、これを読んでください。|
 | 🐧 初心者向け Linux コマンド入門.md | Linuxの超基本コマンドの解説。次に、読むべきはこれ！ |
 | 🐚 シェルスクリプト初心者ガイド.md | 簡単なプログラム作成から実行まで。最後に、これを読んでください。 |
-| manual_misa_like_normalized_filtered.v2.md |misa_like_normalized_filtered.v2.py の使い方解説 |
+| manual_misa_like_normalized_filtered.md |misa_like_normalized_filtered.v2.py の使い方解説 |
 | misa_like_normalized_filtered.v2.py | SSR検出用Pythonスクリプト |
 | Zea_chr1_region01.fa.gz ～ Zea_chr1_region10.fa.gz | トウモロコシChr1の10領域 |
 | Chr6.tsv / Chr6.gff | SSR検出結果の例 |
@@ -113,7 +113,7 @@ pip install biopython # 同じ Codespace では1回だけでOK
 # 🎓 実習課題
 ここからは、Python スクリプト **misa_like_normalized_filtered.v2.py** を使って、
 大きなDNA配列ファイル（FASTA）から、SSRを同定する操作を行います。
-**manual_misa_like_normalized_filtered.v2.md** を参考にして、以下の課題に取り組んでください。
+**manual_misa_like_normalized_filtered.md** を参考にして、以下の課題に取り組んでください。
 
 ## 課題1
 
