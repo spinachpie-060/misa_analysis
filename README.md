@@ -173,6 +173,14 @@ pip install biopython # 同じ Codespace では1回だけでOK
 
 ---
 
+## 課題6
+
+今回の課題を通じて出力された出力結果（GFFファイル）を、ゲノムブラウザー（IGV）使って確認してください。
+（'6.IGV (Integrative Genomics Viewer) で SSR検出結果を確認するマニュアル.md'に手順が記載されています。）
+
+
+---
+
 # 🛑 Codespaces の終了
 
 作業が終わったら
