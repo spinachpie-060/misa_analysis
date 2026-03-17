@@ -53,6 +53,8 @@ Create a new repository
 ├── Chr6.gff                # ゲノムアノテーションファイル
 ├── Chr6.tsv                # SSR検出結果等のデータ
 ├── misa_like_normalized_filtered.v2.py # 解析用メインスクリプト
+├── sample1.txt # ファイル操作の練習用ファイル
+├── sample2.txt # ファイル操作の練習用ファイル
 ├── fastas/                 # トウモロコシのゲノム配列データ（分割された Fasta 形式）
 │   ├── Chr01_pos01.fasta.gz
 │   ├── ...
