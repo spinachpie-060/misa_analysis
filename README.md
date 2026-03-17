@@ -45,19 +45,28 @@ Create a new repository
 
 # 📁 リポジトリの構成
 
-| ファイル | 説明 |
-|---|---|
-| README.md | この説明 |
-| GitHub アカウントの作り方（学生向けガイド）.md | これを読んでアカウントを作ってください |
-| 🐚 シェル（Shell）とは？.md | シェルに関する説明。まず、最初に、これを読んでください。|
-| 🐧 初心者向け Linux コマンド入門.md | Linuxの超基本コマンドの解説。次に、読むべきはこれ！ |
-| 🐚 シェルスクリプト初心者ガイド.md | 簡単なプログラム作成から実行まで。最後に、これを読んでください。 |
-| manual_misa_like_normalized_filtered.md |misa_like_normalized_filtered.v2.py の使い方解説 |
-| misa_like_normalized_filtered.v2.py | SSR検出用Pythonスクリプト |
-| Zea_chr1_region01.fa.gz ～ Zea_chr1_region10.fa.gz | トウモロコシChr1の10領域 |
-| Chr6.tsv / Chr6.gff | SSR検出結果の例 |
-| analysis_examples.md | 出力結果の解析チュートリアル |
-| IGV (Integrative Genomics Viewer) で SSR検出結果を確認するマニュアル.md | ゲノムブラウザーIGVを使って、出力結果を確認しよう |
+**本リポジトリの構成は以下の通りです。**
+
+```text
+.
+├── README.md               # 本ファイル（プロジェクト概要）
+├── Chr6.gff                # ゲノムアノテーションファイル
+├── Chr6.tsv                # SSR検出結果等のデータ
+├── misa_like_normalized_filtered.v2.py # 解析用メインスクリプト
+├── fastas/                 # トウモロコシのゲノム配列データ（分割された Fasta 形式）
+│   ├── Chr01_pos01.fasta.gz
+│   ├── ...
+│   └── Chr10_pos10.fasta.gz
+└── チュートリアル/          # 学習用マニュアル類
+    ├── 0.GitHub アカウントの作り方...          # これを読んでアカウントを作ってください 
+    ├── 1.🐚 シェル（Shell）とは？...          # シェルに関する説明。まず、最初に、これを読んでください。
+    ├── 2.🐧 初心者向け Linux コマンド入門...          #  Linuxの超基本コマンドの解説。次に、読むべきはこれ！ 
+    ├── 3.🐚 シェルスクリプト初心者ガイド...          # 簡単なプログラム作成から実行まで。
+    ├── 4.manual_misa_like_normalized_filtered.md          # misa_like_normalized_filtered.v2.py の使い方解説
+    ├── 5.analysis_examples.md          # 出力結果の解析チュートリアル
+    ├── 6.IGV (Integrative Genomics Viewer) で確認するマニュアル...          # ゲノムブラウザーIGVを使って、出力結果を確認しよう
+    └── 7.🖥️ Windows PC に WSL2 と Ubuntu をインストールする手順...          # Windows PCでLinuxを使い場合
+```
 
 ---
 ## 3. Codespaces を起動する
@@ -117,7 +126,8 @@ pip install biopython # 同じ Codespace では1回だけでOK
 
 ## 課題1
 
-Zea_chr1_region01.fa.gz ~ Zea_chr1_region10.fa.gz から、FASTAファイルを1つ選び、
+ディレクトリ **fastas** に格納されたFASTAファイル
+**Chr01_pos01.fasta.gz** ~ **Chr10_pos10.fasta.gz** から、1つ選び、
 
 **misa_like_normalized_filtered.v2.py** を用いて解析し（オプションを設定しない）、
 生成された `.tsv` と `.gff` を確認せよ。
@@ -128,8 +138,9 @@ Zea_chr1_region01.fa.gz ~ Zea_chr1_region10.fa.gz から、FASTAファイルを1
 
 ## 課題2
 
-Zea_chr1_region01.fa.gz ~ Zea_chr1_region10.fa.gz から、
-FASTAファイルを1つ選び（課題1と同じでOK）、
+ディレクトリ **fastas** に格納されたFASTAファイル
+**Chr01_pos01.fasta.gz** ~ **Chr10_pos10.fasta.gz** から、
+1つ選び（課題1と同じでOK）、
 **異なる2通りのモチーフ長条件を指定**して、**misa_like_normalized_filtered.v2.py** を用いて解析し、
 生成された `.tsv` と `.gff` を確認せよ。
 
