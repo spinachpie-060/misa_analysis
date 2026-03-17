@@ -111,14 +111,16 @@ pip install biopython # 同じ Codespace では1回だけでOK
 ---
 
 # 🎓 実習課題
-ここからは、Python スクリプト **misa_like_normalized_filtered.v2.py** を使って、大きなDNA配列ファイル（FASTA）から、SSRを同定する操作を行います。
+ここからは、Python スクリプト **misa_like_normalized_filtered.v2.py** を使って、
+大きなDNA配列ファイル（FASTA）から、SSRを同定する操作を行います。
 **manual_misa_like_normalized_filtered.v2.md** を参考にして、以下の課題に取り組んでください。
 
 ## 課題1
 
 Zea_chr1_region01.fa.gz ~ Zea_chr1_region10.fa.gz から、FASTAファイルを1つ選び、
 
-**misa_like_normalized_filtered.v2.py** を用いて解析し（オプションを設定しない）、生成された `.tsv` と `.gff` を確認せよ。
+**misa_like_normalized_filtered.v2.py** を用いて解析し（オプションを設定しない）、
+生成された `.tsv` と `.gff` を確認せよ。
 
 **同じ班のメンバー間で、異なるファイルを選んでください。**
 
@@ -126,9 +128,10 @@ Zea_chr1_region01.fa.gz ~ Zea_chr1_region10.fa.gz から、FASTAファイルを1
 
 ## 課題2
 
-Zea_chr1_region01.fa.gz ~ Zea_chr1_region10.fa.gz から、FASTAファイルを1つ選び（課題1と同じでOK）、
-**異なる2通りのモチーフ長条件を指定**して、**misa_like_normalized_filtered.v2.py** を用いて解析し、生成された `.tsv` と `.gff` を確認せよ。
-
+Zea_chr1_region01.fa.gz ~ Zea_chr1_region10.fa.gz から、
+FASTAファイルを1つ選び（課題1と同じでOK）、
+**異なる2通りのモチーフ長条件を指定**して、**misa_like_normalized_filtered.v2.py** を用いて解析し、
+生成された `.tsv` と `.gff` を確認せよ。
 
 ---
 
@@ -140,10 +143,11 @@ Zea_chr1_region01.fa.gz ~ Zea_chr1_region10.fa.gz から、FASTAファイルを1
 ---
 
 ## 課題4
+
 Zea_chr1_region01.fa.gz ~ Zea_chr1_region10.fa.gz の全てを、
 **misa_like_normalized_filtered.v2.py** を用いて **一括で解析** する Bash スクリプトを作成し、実行しなさい。
 
-**シェルスクリプト初心者ガイド** にヒントがあります。 **for 文** が鍵になります。）
+**シェルスクリプト初心者ガイド** にヒントがあります。 **for 文** が鍵になります。
 
 ---
 
