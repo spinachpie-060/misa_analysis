@@ -1,6 +1,6 @@
 # SSR（単純反復配列）検出スクリプト 使用マニュアル
 
-このマニュアルでは、Pythonスクリプト `misa_like_normalized_filtered.py` を使用して、ゲノム配列からSSR（Simple Sequence Repeat：マイクロサテライト）を検出する方法を解説します。
+このマニュアルでは、Pythonスクリプト `misa_like_normalized_filtered.2.py` を使用して、ゲノム配列からSSR（Simple Sequence Repeat：マイクロサテライト）を検出する方法を解説します。
 
 ## 1. 概要
 
@@ -24,7 +24,7 @@
 
 Note: postCreateCommand によって、環境立ち上げ時にバックグラウンドで pip install biopython が実行されます。起動直後はインストールに数十秒かかる場合がありますが、手動でコマンドを打つ必要はありません。
 
-### ライブラリのインストール（Linux, Unixのローカル環境で実行する場合に必要です）
+### ライブラリのインストール（Linux, Unixのローカル環境で実行する場合に必要ですが、今回のようにCodespacesを使い場合は不要です）
 
 ターミナル（またはコマンドプロンプト）で以下のコマンドを実行してください。
 
@@ -38,8 +38,14 @@ pip install biopython
 基本コマンドは以下の通りです。
 
 ```bash
-python misa_like_normalized_filtered.py [入力FASTAファイル]
+python misa_like_normalized_filtered.v2.py [入力FASTAファイル]
 
+```
+
+具体的には、こんな感じ
+
+```
+python misa_like_normalized_filtered.v2.py Zea_chr1_region10.fa.gz
 ```
 
 ### オプション設定
@@ -52,7 +58,7 @@ python misa_like_normalized_filtered.py [入力FASTAファイル]
 **例：モチーフ長 3〜5塩基のものだけを検出したい場合**
 
 ```bash
-python misa_like_normalized_filtered.py input.fasta --min-unit 3 --max-unit 5
+python misa_like_normalized_filtered.v2.py input.fasta --min-unit 3 --max-unit 5
 
 ```
 
@@ -62,6 +68,17 @@ python misa_like_normalized_filtered.py input.fasta --min-unit 3 --max-unit 5
 
 1. **`.tsv` ファイル**: Excel等で閲覧しやすいタブ区切りテキスト
 2. **`.gff` ファイル**: ゲノムブラウザ（IGVなど）で表示可能な注釈ファイル
+
+プレフィックス（拡張子よりも前方部分）として、**"入力FASTAファイル名"_u"最小モチーフ長"to"最大モチーフ長"**　を持つファイルが生成される仕様にスクリプトは設計されています。
+
+具体的には、こんな感じ
+
+```bash
+Zea_chr1_region01_u2to6.tsv
+Zea_chr1_region01_u2to6.gff
+
+```
+
 
 ### TSVファイルの項目解説
 
