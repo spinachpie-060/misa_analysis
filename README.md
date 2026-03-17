@@ -102,7 +102,7 @@ pip install biopython # 同じ Codespace では1回だけでOK
 
 # Linux ターミナル操作
 
-**以下の順でファイルの内容に従って、Linux ターミナル操作に慣れよう。**
+**以下の順で、ファイルにある課題に取り組んで、Linux ターミナル操作に慣れよう。**
 
 - 🐚 シェル（Shell）とは？.md
 - 🐧 初心者向け Linux コマンド入門.md
