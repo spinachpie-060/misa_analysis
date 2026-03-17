@@ -93,6 +93,7 @@ Ctrl + Shift + `
 この教材では **Biopython** を使用します。
 
 通常は次のコマンドでインストールしますが、リポジトリをコピーすると自動でインストールされるように設定したので、今回は以下の操作は不要です。
+
 ```
 pip install biopython # 同じ Codespace では1回だけでOK
 ```
@@ -101,21 +102,23 @@ pip install biopython # 同じ Codespace では1回だけでOK
 
 # Linux ターミナル操作
 
-**以下の順でファイルを開いて、学習を進めてください。**
+**以下の順でファイルの内容に従って、Linux ターミナル操作に慣れよう。**
 
-- '🐚 シェル（Shell）とは？.md'
-- '🐧 初心者向け Linux コマンド入門.md'
-- '🐚 シェルスクリプト初心者ガイド.md'
+- 🐚 シェル（Shell）とは？.md
+- 🐧 初心者向け Linux コマンド入門.md
+- 🐚 シェルスクリプト初心者ガイド.md
 
 ---
 
 # 🎓 実習課題
+ここからは、Python スクリプト **misa_like_normalized_filtered.v2.py** を使って、大きなDNA配列ファイル（FASTA）から、SSRを同定する操作を行います。
+**manual_misa_like_normalized_filtered.v2.md** を参考にして、以下の課題に取り組んでください。
 
 ## 課題1
 
-Zea_chr1_region01.fa.gz ~ Zea_chr1_region10.fa.gz から、
+Zea_chr1_region01.fa.gz ~ Zea_chr1_region10.fa.gz から、FASTAファイルを1つ選び、
 
-1つ選んで解析し（オプションを設定しない）、生成された `.tsv` と `.gff` を確認せよ。
+**misa_like_normalized_filtered.v2.py** を用いて解析し（オプションを設定しない）、生成された `.tsv` と `.gff` を確認せよ。
 
 **同じ班のメンバー間で、異なるファイルを選んでください。**
 
@@ -123,32 +126,24 @@ Zea_chr1_region01.fa.gz ~ Zea_chr1_region10.fa.gz から、
 
 ## 課題2
 
-Zea_chr1_region01.fa.gz ~ Zea_chr1_region10.fa.gz から、1つ選び、
-異なる2通りのモチーフ長条件を指定して、
+Zea_chr1_region01.fa.gz ~ Zea_chr1_region10.fa.gz から、FASTAファイルを1つ選び（課題1と同じでOK）、
+**異なる2通りのモチーフ長条件を指定**して、**misa_like_normalized_filtered.v2.py** を用いて解析し、生成された `.tsv` と `.gff` を確認せよ。
 
-
-
-–min-unit 2 –max-unit 3
-–min-unit 4 –max-unit 6
 
 ---
 
 ## 課題3
 
+**analysis_examples.md** の手順に従って、
 出力された TSV を Linux コマンドで解析せよ。
-
-analysis_examples.md
-
-を参考にすること。
 
 ---
 
 ## 課題4
+Zea_chr1_region01.fa.gz ~ Zea_chr1_region10.fa.gz の全てを、
+**misa_like_normalized_filtered.v2.py** を用いて **一括で解析** する Bash スクリプトを作成し、実行しなさい。
 
-
-
-10領域すべてを解析する Bash スクリプトを作成し、実行しなさい。
-（"シェルスクリプト初心者ガイド" にヒントがあります。 "for構文" が鍵になります。）
+**シェルスクリプト初心者ガイド** にヒントがあります。 **for 文** が鍵になります。）
 
 ---
 
