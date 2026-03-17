@@ -96,57 +96,16 @@ Ctrl + Shift + `
 ```
 pip install biopython # 同じ Codespace では1回だけでOK
 ```
----
-
-# ▶️ 実行方法
-
-## 1. ファイル確認
-
-ls -1
 
 ---
 
-## 2. SSR検出（基本）
+# Linux ターミナル操作
 
-python misa_like_normalized_filtered.v2.py Zea_chr1_region01.fa.gz
+**以下の順でファイルを開いて、学習を進めてください。**
 
-成功すると
-
-1:1-1000000.tsv
-1:1-1000000.gff
-
-が生成されます。
-
----
-
-## 3. モチーフ長を指定
-
-例：3〜6塩基
-
-python misa_like_normalized_filtered.py Zea_chr1_region01.fa.gz --min-unit 3 --max-unit 6
-
----
-
-## 4. gzip を解凍する場合（通常不要）
-
-gunzip Zea_chr1_region01.fa.gz
-
-`.fa.gz` のまま実行できます。
-
----
-
-# 🧪 出力形式
-
-### TSV
-
-ID	Start	End	Motif	Repeats	SSR
-1:1-1000000	100	120	TTA	7	(TTA)7
-
-### GFF
-
-1:1-1000000	MISA	microsatellite	100	120	.	.	.	Note=microsatellite,(TTA)7;ID=1:1-1000000.1
-
-GFF は IGV などのゲノムブラウザで可視化できます。
+- '🐚 シェル（Shell）とは？.md'
+- '🐧 初心者向け Linux コマンド入門.md'
+- '🐚 シェルスクリプト初心者ガイド.md'
 
 ---
 
