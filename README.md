@@ -195,13 +195,6 @@ Stop Current Codespace
 
 ※ブラウザを閉じただけでは停止しません。
 
----
-
-# 💡 Linux初心者向け教材
-
-https://abundant-dill-cf4.notion.site/Linux-1c2d8ba9f8e28081aa61f9377804f109
-
-
 ⸻
 
 
