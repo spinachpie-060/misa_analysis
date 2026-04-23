@@ -28,11 +28,11 @@ https://github.com/spinachpie-060/misa_analysis
 
 ## 2. 教材リポジトリを自分の GitHub アカウントに複製（Fork）**
 
-    2-1. 教材ページ（ [https://github.com/spinachpie-060/misa_analysis](https://github.com/spinachpie-060/misa_analysis) ）にアクセスします。
+- 教材ページ（ [https://github.com/spinachpie-060/misa_analysis](https://github.com/spinachpie-060/misa_analysis) ）にアクセスします。
 
-    2-2. 画面右上にある **[Fork]** ボタンをクリックします。
+- 画面右上にある **[Fork]** ボタンをクリックします。
 
-    2-3. 設定画面が表示されたら、そのまま右下の **[Create fork]** をクリックしてください。
+- 設定画面が表示されたら、そのまま右下の **[Create fork]** をクリックしてください。
 
       * これで、ご自身のアカウント内に `(ユーザー名)/misa_analysis` というコピーが作成されます。
 
