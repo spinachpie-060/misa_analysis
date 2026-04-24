@@ -106,6 +106,12 @@ Ctrl + Shift + `
 pip install biopython # 同じ Codespace では1回だけでOK
 ```
 
+Codespacesで Biopython のインストール確認方法
+
+```
+pip show biopython
+```
+
 ---
 
 # Linux ターミナル操作
